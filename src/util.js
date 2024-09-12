@@ -27,7 +27,7 @@ function Location(data = null) {
      */
     this.read = function(location) {
         return new Promise((resolve, reject) => {
-            if (Object.keys(locationFile).includes(location)) {
+            if (!(Object.keys(locationFile).includes(location))) {
                 reject(new Error("Invalid location"));
             }
     
